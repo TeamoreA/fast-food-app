@@ -24,41 +24,6 @@ small a {
   color: black;
 }
 
-
-/*navigation styles*/
-/*.navbar {
-  position: fixed;
-}*/
-/*ul {
-	font-size: 18px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
-    position: sticky;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: #666;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #ddd;
-}
-
-li a.active {
-    /*color: white;*/
-
  /*seperate*/
 
 .topnav {
@@ -246,37 +211,37 @@ footer {
 
 /*food cards*/
 .main-container{
-        width: 80%;
-        margin-top: 5px;
-        margin-left: auto;
-        margin-right: auto;
-        /*text-align: center;*/
-      }
+  width: 80%;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  /*text-align: center;*/
+}
 
 
-      .card {
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        border-radius: 10px;
-        transition: 0.3s;
-        width: 20%;
-        background-color: gray;
-        padding: 5px;
-        text-align: center;
-        display: inline-block;
-        margin: 20px;
-      }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  transition: 0.3s;
+  width: 20%;
+  background-color: gray;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  margin: 20px;
+}
 
-      .card:hover {
-          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
-      }
+}
 
-      .myContainer {
-          padding: 2px 16px;
-          
-      }
-       .image {
-        border-radius: 40px;
-        width: 100%;
-        /*height: auto;*/
-       }
+.myContainer {
+    padding: 2px 16px;
+    
+}
+ .image {
+  border-radius: 40px;
+  width: 100%;
+  /*height: auto;*/
+ }

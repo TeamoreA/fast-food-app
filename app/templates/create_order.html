@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class="content-container">
+
+
+	    <!-- end of .nav -->
+			<h2>Create Food Item</h2>
+			<hr>
+			<form action="#" method="POST">
+
+
+			  <div class="form-container">
+			  	<div>
+			  		<label for="order"><b>Food name</b><br></label>
+			    	<select class="form-control">
+					  <option value="1">Pizza</option>
+					  <option value="2">Burger</option>
+					  <option value="3">Foo</option>
+					</select>
+			  	</div>
+
+				<div>
+					<label for="quantity"><b>Quantity</b><br></label>
+					<input class="form-control" type="number" placeholder="Quantity" name="quantity" required>
+				</div>
+
+				<div>
+					<label for="address"><b>Address</b><br></label>
+					<input class="form-control" type="text" placeholder="Address" name="address" required>
+				</div>
+
+			     <div>
+			     	<button class="button button-primary" type="submit">Order</button>
+			     </div>
+
+			  </div>
+			</form>
+	</div>
+{% endblock %}

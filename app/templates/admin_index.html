@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="content-container">
+    <!-- end of .nav -->
+	<div class="header">
+		<h2 class="left-align">Edit Food Item</h2>
+		<a class="link-btn left-align button-primary" href="{{ url_for('create_menu') }}">Add New</a>
+	</div>
+	<hr>
+	<div>
+		<table>
+			<tr>
+				<th>#</th>
+				<th>Order Name</th>
+				<th>Price</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Pizza</td>
+				<td>$299</td>
+				<td>
+					<a class="button-small button-success" href="edit.html">Edit</a>
+					<button class="button-small button-danger" href="#" onclick="confirmDelete()">Delete</button>
+				</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Chicken</td>
+				<td>$299</td>
+				<td>
+					<a class="button-small button-success" href="edit.html">Edit</a>
+					<button class="button-small button-danger" href="#" onclick="confirmDelete()">Delete</button>
+				</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Beef</td>
+				<td>$299</td>
+				<td>
+					<a class="button-small button-success" href="edit.html">Edit</a>
+					<button class="button-small button-danger" href="#" onclick="confirmDelete()">Delete</button>
+				</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Pizza</td>
+				<td>$999</td>
+				<td>
+					<a class="button-small button-success" href="edit.html">Edit</a>
+					<button class="button-small button-danger" href="#" onclick="confirmDelete()">Delete</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+{% endblock %}

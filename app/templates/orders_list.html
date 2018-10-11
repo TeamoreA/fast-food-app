@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class="content-container">
+	    <!-- end of .nav -->
+			<div class="header">
+				<h2 class="left-align">Orders Made By Customers</h2>
+				<a class="link-btn left-align button-primary" href="complete_order.html">Approve</a>
+			</div>
+			<hr>
+      <table>
+          <tr>
+            <th>#</th>
+            <th>Order Name</th>
+            <th>Price</th>
+            <th>Ordered By</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Pizza</td>
+            <td>$299</td>
+            <td>James</td>
+            <td>
+    					<button class="button-small button-success" href="#">Accept</button>
+    					<button class="button-small button-danger" href="#">Decline</button>
+    				</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Chicken</td>
+            <td>$299</td>
+	          <td>Jane</td>
+            <td>
+    					<button class="button-small button-success" href="#">Accept</button>
+    					<button class="button-small button-danger" href="#">Decline</button>
+  				  </td>
+          </tr>
+	        <tr>
+            <td>3</td>
+            <td>Beef</td>
+            <td>$299</td>
+	          <td>Jamesy</td>
+            <td>
+    					<button class="button-small button-success" href="#">Accept</button>
+    					<button class="button-small button-danger" href="#">Decline</button>
+  				  </td>
+          </tr>
+	        <tr>
+            <td>4</td>
+            <td>Pizza</td>
+            <td>$999</td>
+	          <td>Tom</td>
+            <td>
+    					<button class="button-small button-success" href="#">Accept</button>
+    					<button class="button-small button-danger" href="#">Decline</button>
+  				  </td>
+          </tr>
+        </table>
+	</div>
+
+{% endblock %}
