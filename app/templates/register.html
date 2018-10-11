@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class="container">
+
+	    <!-- end of .nav -->
+			<h2>Registration Form</h2>
+			<hr>
+			<form action="#">
+
+			  <div class="form-container">
+			  	<div>
+			  		<label for="name"><b>User Name</b><br></label>
+			    	<input class="form-control" type="text" placeholder="Enter Username" name="name" required>
+			  	</div>
+
+				<div>
+					<label for="email"><b>Email</b><br></label>
+			    	<input class="form-control" type="email" placeholder="Enter Email" name="email" required>
+				</div>
+
+				<div>
+					<label for="password"><b>Password</b><br></label>
+			    	<input class="form-control" type="password" placeholder="Enter Password" name="password" required>
+				</div>
+
+				<div>
+					<label for="password"><b>Confirm Password</b><br></label>
+			    	<input class="form-control" type="password" placeholder="Confirm your Password" name="password" required>
+				</div>
+
+		     	<div>
+		     		<button class="button button-primary" type="submit">Register</button>
+		     	</div>
+
+			  </div>
+			</form>
+		<!-- end of .content -->
+		<div>
+	        <small>
+	            Already have an Account? Login  <a href="login.html">here</a>
+	        </small>
+	    </div>
+	</div>
+{% endblock %}

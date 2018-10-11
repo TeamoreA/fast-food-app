@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class="container">
+
+	    <!-- end of .nav -->
+			<h2>Login Form</h2>
+			<hr>
+			<form action="#">
+
+
+			  <div class="form-container">
+			  	<div>
+			  		<label for="email"><b>User name</b><br></label>
+			    	<input class="form-control" type="text" placeholder="Enter user name" name="email" required>
+			  	</div>
+
+				<div>
+					<label for="password"><b>Password</b><br></label>
+				    <input class="form-control" type="password" placeholder="Enter Password" name="password" required>
+				</div>
+
+			     <div>
+			     	<button class="button button-primary" type="submit">Login</button>
+			     	<label>
+				      <input type="checkbox" checked="checked" name="remember"> Remember me
+				    </label>
+			     </div>
+			  </div>
+			</form>
+		<!-- end of .content -->
+		<div>
+	        <small>
+	            Need An Account? <a href="register.html">Sign Up Now</a>
+	        </small>
+	    </div>
+	</div>
+{% endblock %}
