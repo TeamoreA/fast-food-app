@@ -245,3 +245,15 @@ footer {
   width: 100%;
   /*height: auto;*/
  }
+
+ #flash{
+  color: #f442a7;
+  background-color: orange;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  width: 80%;
+  padding-top: 5%;
+  margin: 5px auto;
+  display: block;
+}
