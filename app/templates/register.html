@@ -5,31 +5,31 @@
 	    <!-- end of .nav -->
 			<h2>Registration Form</h2>
 			<hr>
-			<form action="#">
+			<form onsubmit="event.preventDefault(); id="register"">
 
 			  <div class="form-container">
 			  	<div>
 			  		<label for="name"><b>User Name</b><br></label>
-			    	<input class="form-control" type="text" placeholder="Enter Username" name="name" required>
+			    	<input class="form-control" type="text" placeholder="Enter Username" name="name" id="name" required>
 			  	</div>
 
 				<div>
 					<label for="email"><b>Email</b><br></label>
-			    	<input class="form-control" type="email" placeholder="Enter Email" name="email" required>
+			    	<input class="form-control" type="email" placeholder="Enter Email" name="email" id="email" required>
 				</div>
 
 				<div>
 					<label for="password"><b>Password</b><br></label>
-			    	<input class="form-control" type="password" placeholder="Enter Password" name="password" required>
+			    	<input class="form-control" type="password" placeholder="Enter Password" name="password" id="password" required>
 				</div>
 
 				<div>
-					<label for="password"><b>Confirm Password</b><br></label>
-			    	<input class="form-control" type="password" placeholder="Confirm your Password" name="password" required>
+					<label for="confirm_password"><b>Confirm Password</b><br></label>
+			    	<input class="form-control" type="password" placeholder="Confirm your Password" name="confirm_password" name="confirm_password" required>
 				</div>
 
 		     	<div>
-		     		<button class="button button-primary" type="submit">Register</button>
+		     		<button class="button button-primary" id="submit" onclick="register();">Register</button>
 		     	</div>
 
 			  </div>
@@ -37,8 +37,9 @@
 		<!-- end of .content -->
 		<div>
 	        <small>
-	            Already have an Account? Login  <a href="login.html">here</a>
+	            Already have an Account? Login  <a href="{{ url_for('login') }}">here</a>
 	        </small>
 	    </div>
 	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/users.js') }}"></script>
 {% endblock %}
