@@ -4,55 +4,22 @@
 
 
 	    <!-- end of .nav -->
+      <span id="flash"></span>
       <div class="header">
 				<h2 class="left-align">Approve Orders</h2>
 				<a class="link-btn left-align button-primary" href="orders.html">Back</a>
 			</div>
 				<hr>
-            <table>
-                <tr>
-                  <th>#</th>
-                  <th>Order Name</th>
-                  <th>Price</th>
-                  <th>Ordered By</th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Pizza</td>
-                  <td>$299</td>
-                  <td>James</td>
-                  <td>
-										<button class="button-small button-success" href="#">Confirm</button>
-									</td>
-                </tr>
-								<tr>
-                  <td>2</td>
-                  <td>Chicken</td>
-                  <td>$299</td>
-									<td>Jane</td>
-                  <td>
-										<button class="button-small button-success" href="#">Confirm</button>
-									</td>
-                </tr>
-								<tr>
-                  <td>3</td>
-                  <td>Beef</td>
-                  <td>$299</td>
-									<td>Jamesy</td>
-                  <td>
-										<button class="button-small button-success" href="#">Confirm</button>
-									</td>
-                </tr>
-								<tr>
-                  <td>4</td>
-                  <td>Pizza</td>
-                  <td>$999</td>
-									<td>Tom</td>
-                  <td>
-										<button class="button-small button-success" href="#">Confirm</button>
-									</td>
-                </tr>
-              </table>
+            <table id="all_orders">
+              <tr>
+                <th>#</th>
+                <th>Order Name</th>
+                <th>Ordered By</th>
+                <th>Address</th>
+                <th>quatity</th>
+                <th>status</th>
+                <th></th>
+              </tr>
+            </table>
 	</div>
 {% endblock %}

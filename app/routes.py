@@ -52,3 +52,9 @@ def create_menu():
 def create_order():
     '''route to return create order page'''
     return render_template('create_order.html', title='create-order')
+
+
+@app.route('/admin/complete_order')
+def complete_order():
+    '''route to mark order as complete'''
+    return render_template('complete_order.html', title='complete-order')

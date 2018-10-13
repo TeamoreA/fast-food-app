@@ -3,11 +3,13 @@
 
 <div class="content-container">
 	    <!-- end of .nav -->
+      
 			<div class="header">
 				<h2 class="left-align">Orders Made By Customers</h2>
-				<a class="link-btn left-align button-primary" href="complete_order.html">Approve</a>
+				<a class="link-btn left-align button-primary" href="{{ url_for('complete_order') }}">Approve</a>
 			</div>
 			<hr>
+      <span id="flash"></span>
       <table id="all_orders">
           <tr>
             <th>#</th>

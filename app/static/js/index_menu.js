@@ -16,7 +16,7 @@ fetch(corsUrl + url)
         <h4><b>${items[index].name}</b></h4> 
         <p>${items[index].description}</p> 
         <p> <strong>price: $</strong> <em>${items[index].price}</em></p> 
-        <a class="button-small button-success" href="{{ url_for('create_order') }}">Order</a>
+        <a class="button-small button-success" >Order</a>
      </div>
     </div>
     `;

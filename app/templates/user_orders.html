@@ -2,36 +2,22 @@
 {% block content %}
 
 <div class="content-container">
+  <span id="flash"></span>
 	    <!-- end of .nav -->
 			<h2>My Orders</h2>
 			<hr>
-      <table>
+      <span id="flash"></span>
+      <table id="user_orders">
           <tr>
             <th>#</th>
             <th>Order Name</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Pizza</td>
-            <td>$299</td>
-          </tr>
-					<tr>
-            <td>2</td>
-            <td>Chicken</td>
-            <td>$299</td>
-          </tr>
-					<tr>
-            <td>3</td>
-            <td>Beef</td>
-            <td>$299</td>
-          </tr>
-					<tr>
-            <td>4</td>
-            <td>Pizza</td>
-            <td>$999</td>
+            <th>Ordered By</th>
+            <th>Address</th>
+            <th>Quantitiy</th>
+            <th>Status</th>
+            <th></th>
           </tr>
         </table>
 	</div>
-
+ <script type="text/javascript" src="{{ url_for('static', filename='js/user_orders.js') }}"></script>
   {% endblock %}

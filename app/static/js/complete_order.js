@@ -1,7 +1,7 @@
 // display all orders to the admin
 const token = localStorage.getItem("token");
 var corsUrl = 'https://cors-anywhere.herokuapp.com/';
-const url = "https://andela-food-api.herokuapp.com/api/v2/orders";
+const url = "https://andela-food-api.herokuapp.com/api/v2/orders/4";
 fetch(corsUrl  + url, {
     method: 'GET',
     headers: {
@@ -13,7 +13,7 @@ fetch(corsUrl  + url, {
   return response.json()
 })
 .then(function(data){
-  let items = data['Orders'];
+  let items = data.Orders;
   console.log(items);
   for(i = 0; i < items.length; i++){
     document.getElementById('all_orders').innerHTML += `
@@ -25,8 +25,8 @@ fetch(corsUrl  + url, {
       <td>${items[i].quantity}</td>
       <td>${items[i].status}</td>
       <td>
-        <a class="button-small button-success" href="edit.html">Accept</a>
-        <button class="button-small button-danger" onclick="confirmDelete()">Decline</button>
+        <a class="button-small button-success" href="edit.html">Edit</a>
+        <button class="button-small button-danger" onclick="confirmDelete()">Delete</button>
       </td>
     </tr>`;
   }
