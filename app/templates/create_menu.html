@@ -6,30 +6,31 @@
 	    <!-- end of .nav -->
 			<h2>Create Food Item</h2>
 			<hr>
-			<form action="#" method="POST">
+			<form  onsubmit="event.preventDefault();">
 
 
 			  <div class="form-container">
 			  	<div>
 			  		<label for="name"><b>Food name</b><br></label>
-			    	<input class="form-control" type="text" placeholder="Order Name..." name="name" required>
+			    	<input class="form-control" type="text" placeholder="Order Name..." id="name" required>
 			  	</div>
 
 				<div>
 					<label for="price"><b>Price</b><br></label>
-					<input class="form-control" type="number" placeholder="Order Price in Dollars..." name="price" required>
+					<input class="form-control" type="number" placeholder="Order Price in Dollars..." id="price" required>
 				</div>
 
 				<div>
 					<label for="dscription"><b>Description</b><br></label>
-					<textarea class="form-control" rows="5" placeholder="Order Description..." name="description" required></textarea>
+					<textarea class="form-control" rows="5" placeholder="Order Description..." id="description" required></textarea>
 				</div>
 
 			     <div>
-			     	<button class="button button-primary" type="submit">Create</button>
+			     	<button class="button button-primary"  id="submit" onclick="createMenu();">Create</button>
 			     </div>
 
 			  </div>
 			</form>
 	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/menu.js') }}"></script>
 {% endblock %}
