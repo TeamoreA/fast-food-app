@@ -248,7 +248,8 @@ footer {
 
  #flash{
   color: #f442a7;
-  background-color: orange;
+  background-color: gray;
+  border-radius: 5px;
   font-size: 18px;
   font-style: italic;
   text-align: center;
