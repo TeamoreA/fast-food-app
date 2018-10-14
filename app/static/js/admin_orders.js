@@ -1,5 +1,47 @@
-// display all orders to the admin
+//function to create a new user
 const token = localStorage.getItem("token");
+orderProcess = () => {
+  var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+  let data = {
+    status: document.getElementById("status").value
+  };
+  // id = data.order_id
+  id = document.getElementById('order_id').value;
+  console.log(status);
+  var url = `https://andela-food-api.herokuapp.com/api/v2/orders/${id}`;
+   // console.log(url);
+  // const url = `https://andela-food-api.herokuapp.com/api/v2/orders/${id}`;
+  fetch(corsUrl  + url, {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
+      "x-access-token": token
+    }
+  })
+  .then(function(response){
+    return response.json()
+  })
+  .then(function(data){
+    let msg = Object.values(data);
+    // console.log(msg);
+    // let msg = data.message;
+    if(msg === "Order Status updated successfully"){
+      document.getElementById('flash').innerHTML = msg;
+      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
+      window.location.href = "{{ url_for('login') }}";
+    }
+    else{
+      document.getElementById('flash').innerHTML = msg;
+      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
+    }
+  })
+  .catch(error => console.log(error));
+}
+
+
+// display all orders to the admin
+// const token = localStorage.getItem("token");
 var corsUrl = 'https://cors-anywhere.herokuapp.com/';
 const url = "https://andela-food-api.herokuapp.com/api/v2/orders";
 fetch(corsUrl  + url, {
@@ -14,7 +56,6 @@ fetch(corsUrl  + url, {
 })
 .then(function(data){
   let items = data['Orders'];
-  console.log(items);
   for(i = 0; i < items.length; i++){
     document.getElementById('all_orders').innerHTML += `
     <tr>
@@ -24,10 +65,6 @@ fetch(corsUrl  + url, {
       <td>${items[i].address}</td>
       <td>${items[i].quantity}</td>
       <td>${items[i].status}</td>
-      <td>
-        <a class="button-small button-success" href="edit.html">Accept</a>
-        <button class="button-small button-danger" onclick="confirmDelete()">Decline</button>
-      </td>
     </tr>`;
   }
 

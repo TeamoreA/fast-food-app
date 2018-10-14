@@ -44,6 +44,7 @@ fetch(corsUrl + url)
 .then(function(data){
   let items = data["menu"];
   // console.log(items);
+  // window.location.href = "{{ url_for('login') }}";
   for(i = 0; i < items.length; i++){
     document.getElementById('food_menu').innerHTML += `
     <tr>

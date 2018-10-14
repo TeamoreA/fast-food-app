@@ -10,15 +10,30 @@
 			</div>
 			<hr>
       <span id="flash"></span>
+      <form onsubmit="event.preventDefault();">
+          <div>
+            <input type="number" placeholder="Enter order id to complete" id="order_id" style="padding: 6px;width: 30%;font-size: 18px; border-radius: 5px;" required>
+            <select style="padding: 6px;width: 30%;font-size: 18px; border-radius: 5px;" id="status">
+              <option value="Processing" id="status">Processing</option>
+              <option value="Complete" id="status">Complete</option>
+              <option value="Cancelled" id="status">Cancelled</option>
+            </select>
+            <button class="link-btn left-align button-primary" id="submit" onclick="orderProcess();">Send</button>
+          </div>
+           <div>
+            
+           </div>
+      </form>
+
+      
       <table id="all_orders">
           <tr>
             <th>#</th>
             <th>Order Name</th>
             <th>Ordered By</th>
             <th>Address</th>
-            <th>quatity</th>
-            <th>status</th>
-            <th></th>
+            <th>Quatity</th>
+            <th>Status</th>
           </tr>
         </table>
 	</div>
