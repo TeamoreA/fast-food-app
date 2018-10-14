@@ -12,7 +12,7 @@ orderProcess = () => {
    // console.log(url);
   // const url = `https://andela-food-api.herokuapp.com/api/v2/orders/${id}`;
   fetch(corsUrl  + url, {
-    method: 'POST',
+    method: 'PUT',
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
