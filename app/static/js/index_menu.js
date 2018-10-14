@@ -21,6 +21,5 @@ fetch(corsUrl + url)
     </div>
     `;
   }
-
 })
 .catch(error => console.log(error));
