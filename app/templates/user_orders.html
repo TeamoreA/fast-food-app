@@ -13,7 +13,8 @@
             <button class="link-btn left-align button-primary" id="submit" onclick="userOrders();">Send</button>
           </div>
       </form>
-      <table id="user_orders">
+      <div style="overflow-x:auto;">
+        <table id="user_orders">
           <tr>
             <th>#</th>
             <th>Order Name</th>
@@ -23,6 +24,8 @@
             <th>Status</th>
           </tr>
         </table>
+      </div>
+      
 	</div>
  <script type="text/javascript" src="{{ url_for('static', filename='js/user_orders.js') }}"></script>
   {% endblock %}
