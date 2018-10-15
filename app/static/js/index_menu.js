@@ -11,13 +11,12 @@ fetch(corsUrl + url)
   for(index = 0; index < items.length; index++){
     document.getElementById("food_menu").innerHTML += `
     <div class="card">
-      <img src="images/food3.jpg" class="image" alt="Avatar" width="195px" height="190" >
       <div class="myContainer">
         <h4><b>${items[index].name}</b></h4> 
         <p>${items[index].description}</p> 
-        <p> <strong>price: $</strong> <em>${items[index].price}</em></p> 
-        <a class="button-small button-success" >Order</a>
+        <p> <strong>price:</strong> <em>${items[index].price}</em></p>
      </div>
+      <a class="btn button-success" ><i class="fas fa-plus"></i>  Order</a>
     </div>
     `;
   }

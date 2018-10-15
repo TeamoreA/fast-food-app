@@ -7,6 +7,12 @@
 			<h2>My Orders</h2>
 			<hr>
       <span id="flash"></span>
+      <form onsubmit="event.preventDefault();">
+          <div>
+            <input type="number" placeholder="Enter your id" id="user_id" style="padding: 6px;width: 30%;font-size: 18px; border-radius: 5px;" required>
+            <button class="link-btn left-align button-primary" id="submit" onclick="userOrders();">Send</button>
+          </div>
+      </form>
       <table id="user_orders">
           <tr>
             <th>#</th>
@@ -15,7 +21,6 @@
             <th>Address</th>
             <th>Quantitiy</th>
             <th>Status</th>
-            <th></th>
           </tr>
         </table>
 	</div>

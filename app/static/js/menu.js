@@ -51,10 +51,7 @@ fetch(corsUrl + url)
       <td>${items[i].id}</td>
       <td>${items[i].name}</td>
       <td>${items[i].price}</td>
-      <td>
-        <a class="button-small button-success" href="edit.html">Edit</a>
-        <button class="button-small button-danger" onclick="confirmDelete()">Delete</button>
-      </td>
+      <td>${items[i].description}</td>
     </tr>`;
   }
 })

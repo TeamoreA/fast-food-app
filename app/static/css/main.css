@@ -109,6 +109,22 @@ form {
     border-radius: 5px;
     text-decoration: none;
 }
+.btn {
+    font-size: 16px;
+    color: white;
+    padding-top:  10px;
+    padding-bottom:  10px;
+    display: block;
+    /*margin: 8px 0;*/
+    border: none;
+    cursor: pointer;
+    /*width: 120px;*/
+    /*border-radius: 5px;*/
+    text-decoration: none;
+}
+.btn:hover {
+    opacity: 0.8;
+}
 
 .button:hover {
     opacity: 0.8;
@@ -191,10 +207,10 @@ a {
 
 footer {
   background-color: #f3f3f3;
+  bottom: 0px;
+  position: fixed;
   opacity: 0.8;
-  width: 96%;
-  margin: auto;
-  border-radius: 5px;
+  width: 100%;
 }
  footer p {
    padding: 4px;
@@ -247,7 +263,7 @@ footer {
  }
 
  #flash{
-  color: black;
+  color: rgb(16, 6, 154);
   font-size: 18px;
   font-style: italic;
   text-align: center;
