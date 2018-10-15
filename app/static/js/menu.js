@@ -24,7 +24,7 @@ createMenu = () => {
     if(msg === "New food item been created successfully"){
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
-      window.location.href = "/api/v2/menu";
+      window.location.href = "/admin/admin_index";
     }
     else{
       document.getElementById('flash').innerHTML = msg;
@@ -43,8 +43,6 @@ fetch(corsUrl + url)
 })
 .then(function(data){
   let items = data["menu"];
-  // console.log(items);
-  // window.location.href = "{{ url_for('login') }}";
   for(i = 0; i < items.length; i++){
     document.getElementById('food_menu').innerHTML += `
     <tr>

@@ -17,7 +17,7 @@ fetch(corsUrl + url)
 .catch(error => console.log(error));
 
 
-//function to create a new user
+//function to create a new order
 const token = localStorage.getItem("token");
 createOrder = () => {
   var corsUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -45,7 +45,7 @@ createOrder = () => {
     if(msg === "Order created successfully"){
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
-      window.location.href = "/login";
+      window.location.href = "/admin/myorders";
     }
     else{
       document.getElementById('flash').innerHTML = msg;

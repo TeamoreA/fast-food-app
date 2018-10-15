@@ -25,7 +25,7 @@ register = () => {
     if(msg === "New user has been created successfully"){
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
-      window.location.href = "{{ url_for('login') }}";
+      window.location.href = "/login";
     }
     else{
       document.getElementById('flash').innerHTML = msg;
@@ -60,7 +60,7 @@ login = () => {
       localStorage.setItem('token', access_token);
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
-      window.location.href = "{{ url_for('home') }}";
+      window.location.href = "/";
     }
     else{
       document.getElementById('flash').innerHTML = msg;

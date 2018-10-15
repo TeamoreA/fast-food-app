@@ -29,7 +29,7 @@ orderProcess = () => {
     if(msg === "Order Status updated successfully"){
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
-      window.location.href = "{{ url_for('login') }}";
+      window.location.href = "/admin/orders_list";
     }
     else{
       document.getElementById('flash').innerHTML = msg;
