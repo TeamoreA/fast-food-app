@@ -42,6 +42,8 @@ login = () => {
     username: document.getElementById("username").value,
     password: document.getElementById("password").value
   };
+  username = data.username
+  localStorage.setItem('currentUser', username);
   const url = 'https://andela-food-api.herokuapp.com/api/v2/auth/signin';
   fetch(corsUrl  + url, {
     method: 'POST',
@@ -72,10 +74,3 @@ login = () => {
   .catch(error => console.log(error));
 }
 
-//User logout
-  localStorage.removeItem('token');
-  var msg = "You logged out successfully";
-  document.getElementById('flash').style.display = "block";
-  document.getElementById('flash').innerHTML = msg;
-  setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 60000);
-  window.location.href = "/";

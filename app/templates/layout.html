@@ -28,11 +28,11 @@
 	<nav class="topnav" id="myTopnav">
 		  <a class="active" href="{{ url_for('home') }}"><i class="fas fa-utensils"></i>  Fast-Food</a>
 		  <a href="{{ url_for('user_orders') }}">History</a>
-		  <a href="{{ url_for('admin_index') }}">Menu</a>
-		  <a href="{{ url_for('orders_list') }}">Orders</a>
+		  <a id="menu" href="{{ url_for('admin_index') }}">Menu</a>
+		  <a id="orders" href="{{ url_for('orders_list') }}">Orders</a>
 		  <!-- <div class="float-links-right"> -->
-			  <a href="{{ url_for('login') }}">Login</a>
-			  <a href="{{ url_for('register') }}">Register</a>
+			  <a id="login" href="{{ url_for('login') }}">Login</a>
+			  <a id="register" href="{{ url_for('register') }}">Register</a>
 			  <a id="logout" href="javascript:void(0);" onclick="logout();">Logout</a>
 		  <!-- </div> -->
 		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
