@@ -262,7 +262,7 @@ footer {
   /*height: auto;*/
  }
 
- #flash{
+/* #flash{
   color: rgb(16, 6, 154);
   font-size: 18px;
   font-style: italic;
@@ -270,4 +270,30 @@ footer {
   width: 80%;
   margin: 5px auto;
   display: block;
+}*/
+.alert {
+  display: none;
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: lightblue;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }

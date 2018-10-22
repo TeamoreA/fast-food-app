@@ -58,14 +58,24 @@ login = () => {
     if(msg === "You logged in successfully"){
       access_token = data.token
       localStorage.setItem('token', access_token);
+      document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
-      window.location.href = "/";
+      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 60000);
+      // window.location.href = "/";
     }
     else{
+      document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
+      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 60000);
     }
   })
   .catch(error => console.log(error));
 }
+
+//User logout
+  localStorage.removeItem('token');
+  var msg = "You logged out successfully";
+  document.getElementById('flash').style.display = "block";
+  document.getElementById('flash').innerHTML = msg;
+  setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 60000);
+  window.location.href = "/";

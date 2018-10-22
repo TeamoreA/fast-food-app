@@ -22,8 +22,6 @@
 		    background-attachment: fixed;
 		    opacity: 0.95;
 		  }
-		  /*seperate*/
-
 	</style>
 </head>
 <body>
@@ -35,11 +33,17 @@
 		  <!-- <div class="float-links-right"> -->
 			  <a href="{{ url_for('login') }}">Login</a>
 			  <a href="{{ url_for('register') }}">Register</a>
+			  <a id="logout" href="javascript:void(0);" onclick="logout();">Logout</a>
 		  <!-- </div> -->
 		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		    <i class="fa fa-bars"></i>
 		  </a>
 	</nav>
+	<div class="alert" id="flash">
+	  // <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	  <!-- <strong>Danger!</strong> Indicates a dangerous or potentially negative action. -->
+	</div>
+	<!-- end of alert message -->
 	  {% block content %} {% endblock %}
 	<footer>
 		<p>Developed by Developer-X copyright 2018.</p>
