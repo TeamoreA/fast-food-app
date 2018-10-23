@@ -1,4 +1,26 @@
 const activeUser = localStorage.getItem("currentUser");
+var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+const URI = "https://andela-food-api.herokuapp.com/api/v2/auth/signup";
+fetch(corsUrl  + URI, {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+.then(function(response){
+  return response.json()
+})
+.then(function(data){
+  let users = data['Users'];
+  for(i = 0; i < users.length; i++){
+      if (users[i].name === activeUser) {
+      	localStorage.setItem('isAdmin', users[i].admin);
+      	localStorage.setItem('sssss', users[i].id);
+	  }
+  }
+
+})
+
 // console.log(activeUser);
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -13,7 +35,8 @@ function myFunction() {
 function logout() {
     // var x = document.getElementById("logout");
 	localStorage.removeItem('token');
-	localStorage.removeItem('currentUser');
+	localStorage.removeItem('isAdmin');
+	localStorage.removeItem('userId');
 	var msg = "You logged out successfully";
 	document.getElementById('flash').style.display = "block";
 	document.getElementById('flash').innerHTML = msg;
@@ -33,25 +56,27 @@ if (isAdmin !== 'true') {
 	document.getElementById('menu').style.display = "none";
 }
 
-var corsUrl = 'https://cors-anywhere.herokuapp.com/';
-const URI = "https://andela-food-api.herokuapp.com/api/v2/auth/signup";
-fetch(corsUrl  + URI, {
-    method: 'GET',
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-.then(function(response){
-  return response.json()
-})
-.then(function(data){
-  let users = data['Users'];
-  for(i = 0; i < users.length; i++){
-      if (users[i].name === activeUser) {
-      	localStorage.setItem('isAdmin', users[i].admin);
-	  }
-  }
-})
-.catch(error => console.log(error));
+// var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+// const URI = "https://andela-food-api.herokuapp.com/api/v2/auth/signup";
+// fetch(corsUrl  + URI, {
+//     method: 'GET',
+//     headers: {
+//       "Content-Type": "application/json"
+//     }
+//   })
+// .then(function(response){
+//   return response.json()
+// })
+// .then(function(data){
+//   let users = data['Users'];
+//   for(i = 0; i < users.length; i++){
+//       if (users[i].name === activeUser) {
+//       	localStorage.setItem('isAdmin', users[i].admin);
+//       	localStorage.setItem('sssss', users[i].id);
+// 	  }
+//   }
+
+// })
+// .catch(error => console.log(error));
 
 

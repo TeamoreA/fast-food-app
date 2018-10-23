@@ -6,14 +6,14 @@
 	    <!-- end of .nav -->
 			<h2>Create Food Item</h2>
 			<hr>
-			<span id="flash"></span>
+			<!-- <span id="flash"></span> -->
 			<form  onsubmit="event.preventDefault();">
 
 
 			  <div class="form-container">
 			  	<div>
 			  		<label for="name"><b>Food name</b><br></label>
-			    	<input class="form-control" type="text" placeholder="Order Name..." id="name" required>
+			    	<input class="form-control" type="text" placeholder="Food Name..." id="name" required>
 			  	</div>
 
 				<div>
@@ -22,7 +22,12 @@
 				</div>
 
 				<div>
-					<label for="dscription"><b>Description</b><br></label>
+					<label for="image"><b>Image Url</b><br></label>
+					<input class="form-control" type="text" placeholder="Order image in Dollars..." id="image" required>
+				</div>
+
+				<div>
+					<label for="description"><b>Description</b><br></label>
 					<textarea class="form-control" rows="5" placeholder="Order Description..." id="description" required></textarea>
 				</div>
 

@@ -24,8 +24,9 @@ register = () => {
     // let msg = data.message;
     if(msg === "New user has been created successfully"){
       document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
       window.location.href = "/login";
+      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
+      
     }
     else{
       document.getElementById('flash').innerHTML = msg;

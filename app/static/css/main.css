@@ -277,13 +277,13 @@ footer {
   padding: 20px;
   margin: auto;
   margin-top: 10px;
-  background-color: lightblue;
+  background-color: #5AA5ED;
   color: white;
   border-radius: 5px;
   text-align: center;
 }
 
-.closebtn {
+.close-button {
   margin-left: 15px;
   color: white;
   font-weight: bold;
@@ -294,6 +294,6 @@ footer {
   transition: 0.3s;
 }
 
-.closebtn:hover {
+.close-button:hover {
   color: black;
 }

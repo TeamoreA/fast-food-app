@@ -43,11 +43,13 @@ createOrder = () => {
     console.log(msg);
     // let msg = data.message;
     if(msg === "Order created successfully"){
+      document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
       window.location.href = "/admin/myorders";
     }
     else{
+      document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
     }

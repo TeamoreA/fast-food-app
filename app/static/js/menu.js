@@ -4,9 +4,11 @@ createMenu = () => {
   var corsUrl = 'https://cors-anywhere.herokuapp.com/';
   let data = {
     name: document.getElementById("name").value,
-    description: document.getElementById("description").value,
-    price: document.getElementById("price").value
+    price: document.getElementById("price").value,
+    description: document.getElementById("description").value
+
   };
+  console.log(token);
   const url = 'https://andela-food-api.herokuapp.com/api/v2/menu';
   fetch(corsUrl  + url, {
     method: 'POST',
@@ -22,13 +24,15 @@ createMenu = () => {
   .then(function(data){
     let msg = data.message;
     if(msg === "New food item been created successfully"){
+      document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
+      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 8000);
       window.location.href = "/admin/admin_index";
     }
     else{
+      document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 6000);
+      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 8000);
     }
   })
   .catch(error => console.log(error));
