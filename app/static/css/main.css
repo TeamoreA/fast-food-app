@@ -259,18 +259,8 @@ footer {
  .image {
   border-radius: 40px;
   width: 100%;
-  /*height: auto;*/
  }
 
-/* #flash{
-  color: rgb(16, 6, 154);
-  font-size: 18px;
-  font-style: italic;
-  text-align: center;
-  width: 80%;
-  margin: 5px auto;
-  display: block;
-}*/
 .alert {
   display: none;
   width: 80%;

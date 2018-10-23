@@ -15,13 +15,12 @@ fetch(corsUrl  + URI, {
   for(i = 0; i < users.length; i++){
       if (users[i].name === activeUser) {
       	localStorage.setItem('isAdmin', users[i].admin);
-      	localStorage.setItem('sssss', users[i].id);
+      	localStorage.setItem('userId', users[i].id);
 	  }
   }
 
 })
 
-// console.log(activeUser);
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -33,7 +32,6 @@ function myFunction() {
 
 
 function logout() {
-    // var x = document.getElementById("logout");
 	localStorage.removeItem('token');
 	localStorage.removeItem('isAdmin');
 	localStorage.removeItem('userId');
@@ -72,7 +70,7 @@ if (isAdmin !== 'true') {
 //   for(i = 0; i < users.length; i++){
 //       if (users[i].name === activeUser) {
 //       	localStorage.setItem('isAdmin', users[i].admin);
-//       	localStorage.setItem('sssss', users[i].id);
+//       	localStorage.setItem('userId', users[i].id);
 // 	  }
 //   }
 

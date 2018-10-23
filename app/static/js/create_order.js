@@ -40,7 +40,6 @@ createOrder = () => {
   })
   .then(function(data){
     let msg = Object.values(data);
-    console.log(msg);
     // let msg = data.message;
     if(msg === "Order created successfully"){
       document.getElementById('flash').style.display = "block";
