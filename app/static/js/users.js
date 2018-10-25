@@ -63,13 +63,13 @@ login = () => {
       localStorage.setItem('token', access_token);
       document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 60000);
-      // window.location.href = "/";
+      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 6000);
+      window.location.href = "/";
     }
     else{
       document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 60000);
+      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 6000);
     }
   })
   .catch(error => console.log(error));

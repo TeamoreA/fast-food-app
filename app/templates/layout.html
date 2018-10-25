@@ -26,23 +26,18 @@
 </head>
 <body>
 	<nav class="topnav" id="myTopnav">
-		  <a class="active" href="{{ url_for('home') }}"><i class="fas fa-utensils"></i>  Fast-Food</a>
+		  <a class="active" href="{{ url_for('home') }}"><i class="fas fa-utensils"></i>  Fast-Food </a>
 		  <a href="{{ url_for('user_orders') }}">History</a>
 		  <a id="menu" href="{{ url_for('admin_index') }}">Menu</a>
 		  <a id="orders" href="{{ url_for('orders_list') }}">Orders</a>
-		  <!-- <div class="float-links-right"> -->
-			  <a id="login" href="{{ url_for('login') }}">Login</a>
-			  <a id="register" href="{{ url_for('register') }}">Register</a>
-			  <a id="logout" href="javascript:void(0);" onclick="logout();">Logout</a>
-		  <!-- </div> -->
+		  <a id="login" href="{{ url_for('login') }}">Login</a>
+		  <a id="register" href="{{ url_for('register') }}">Register</a>
+		  <a id="logout" href="javascript:void(0);" onclick="logout();">Logout</a>
 		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		    <i class="fa fa-bars"></i>
 		  </a>
 	</nav>
-	<div class="alert" id="flash">
-	  <span class="close-button" onclick="this.parentElement.style.display='none';">&times;</span>
-	  <!-- <strong>Danger!</strong> Indicates a dangerous or potentially negative action. -->
-	</div>
+	<span id="flash"></span>
 	<!-- end of alert message -->
 	  {% block content %} {% endblock %}
 	<footer>

@@ -21,12 +21,13 @@ fetch(corsUrl + url)
 const token = localStorage.getItem("token");
 createOrder = () => {
   var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+  const url = 'https://andela-food-api.herokuapp.com/api/v2/orders';
+  var values = document.getElementById("order_menu");
   let data = {
-    name: document.getElementById("name").value,
+    name: values.options[values.selectedIndex].value,
     address: document.getElementById("address").value,
     quantity: document.getElementById("quantity").value
   };
-  const url = 'https://andela-food-api.herokuapp.com/api/v2/orders';
   fetch(corsUrl  + url, {
     method: 'POST',
     body: JSON.stringify(data),

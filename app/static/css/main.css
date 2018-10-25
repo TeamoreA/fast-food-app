@@ -88,6 +88,7 @@ form {
 
 .form-control {
     width: 80%;
+    min-width: 130px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -115,11 +116,8 @@ form {
     padding-top:  10px;
     padding-bottom:  10px;
     display: block;
-    /*margin: 8px 0;*/
     border: none;
     cursor: pointer;
-    /*width: 120px;*/
-    /*border-radius: 5px;*/
     text-decoration: none;
 }
 .btn:hover {
@@ -261,29 +259,15 @@ footer {
   width: 100%;
  }
 
-.alert {
+#flash {
   display: none;
   width: 80%;
-  padding: 20px;
-  margin: auto;
-  margin-top: 10px;
-  background-color: #5AA5ED;
+  /*padding: 15px;*/
   color: white;
   border-radius: 5px;
+  background-color: #5AA5ED;
   text-align: center;
-}
-
-.close-button {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.close-button:hover {
-  color: black;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 18px;
 }

@@ -54,27 +54,3 @@ if (isAdmin !== 'true') {
 	document.getElementById('menu').style.display = "none";
 }
 
-// var corsUrl = 'https://cors-anywhere.herokuapp.com/';
-// const URI = "https://andela-food-api.herokuapp.com/api/v2/auth/signup";
-// fetch(corsUrl  + URI, {
-//     method: 'GET',
-//     headers: {
-//       "Content-Type": "application/json"
-//     }
-//   })
-// .then(function(response){
-//   return response.json()
-// })
-// .then(function(data){
-//   let users = data['Users'];
-//   for(i = 0; i < users.length; i++){
-//       if (users[i].name === activeUser) {
-//       	localStorage.setItem('isAdmin', users[i].admin);
-//       	localStorage.setItem('userId', users[i].id);
-// 	  }
-//   }
-
-// })
-// .catch(error => console.log(error));
-
-
