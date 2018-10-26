@@ -6,7 +6,12 @@
 	    <!-- end of .nav -->
 			<h2>My Orders</h2>
 			<hr>
-      <!-- <span id="flash"></span> -->
+      <form onsubmit="event.preventDefault();">
+          <div>
+            <input type="number" min="1" placeholder="Enter order id to delete" id="order_id" style="padding: 8px;width: 30%;font-size: 15px; border-radius: 5px; min-width: 130px;" required>
+            <button class="link-btn left-align button-danger" id="submit" onclick="deleteOrder();">Delete <i class="far fa-trash-alt"></i></button>
+          </div>
+      </form>
       <div style="overflow-x:auto;">
         <table id="user_orders">
           <tr>

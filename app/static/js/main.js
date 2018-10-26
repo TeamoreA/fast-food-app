@@ -44,6 +44,7 @@ function logout() {
 
 if (localStorage.getItem('token') === null) {
   document.getElementById('logout').style.display = "none";
+  document.getElementById('history').style.display = "none";
 } else {
 	document.getElementById('login').style.display = "none";
 	document.getElementById('register').style.display = "none";

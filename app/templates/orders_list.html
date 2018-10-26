@@ -11,17 +11,14 @@
       <!-- <span id="flash"></span> -->
       <form onsubmit="event.preventDefault();">
           <div>
-            <input type="number" placeholder="Enter order id to process" id="order_id" style="padding: 6px;width: 30%;font-size: 15px; border-radius: 5px;" required>
-            <select style="padding: 6px;width: 30%;font-size: 15px; border-radius: 5px;" id="status">
+            <input type="number" min="1" placeholder="Enter order id to process" id="order_id" style="padding: 6px;width: 30%;font-size: 15px; border-radius: 5px; min-width: 130px;" required>
+            <select style="padding: 6px;width: 30%;font-size: 15px; border-radius: 5px; min-width: 130px;" id="status">
               <option value="Processing" id="status" style="font-size: 15px;">Processing</option>
               <option value="Complete" id="status" style="font-size: 15px;">Complete</option>
               <option value="Cancelled" id="status" style="font-size: 15px;">Cancelled</option>
             </select>
             <button class="link-btn left-align button-primary" id="submit" onclick="orderProcess();">Send</button>
           </div>
-           <div>
-            
-           </div>
       </form>
 
       <div style="overflow-x:auto;">

@@ -19,16 +19,17 @@ register = () => {
     return response.json()
   })
   .then(function(data){
-    let msg = Object.values(data);
+    let msg = data.message;;
     console.log(msg);
     // let msg = data.message;
     if(msg === "New user has been created successfully"){
+      document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
-      window.location.href = "/login";
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
-      
+      window.location.href = "/login";
     }
     else{
+      document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
     }

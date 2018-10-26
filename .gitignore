@@ -1,2 +1,6 @@
 __pycache__
 env/
+__pycache__
+htmlcov
+node_modules
+coverage

@@ -1,0 +1,23 @@
+{
+  "name": "fast-food-app",
+  "version": "1.0.0",
+  "description": "- A user can register and login.\r - A user should be able to order for food\r - The admin should be able to add, edit or delete the fast-food items\r - The admin should be able to see a list of fast-food items\r - The Admin user should be able to do the following:\r       See a list of orders\r       Accept and decline orders\r       Mark orders as completed\r - A user should be able to see a history of ordered food",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamoreA/fast-food-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeamoreA/fast-food-app/issues"
+  },
+  "homepage": "https://github.com/TeamoreA/fast-food-app#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
