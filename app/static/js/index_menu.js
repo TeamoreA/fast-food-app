@@ -1,5 +1,5 @@
 // display menu items
-var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+var corsUrl = 'https://everywherecors.herokuapp.com/';
 const url = "https://andela-food-api.herokuapp.com/api/v2/menu";
 fetch(corsUrl + url)
 .then(function(response){

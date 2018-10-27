@@ -1,7 +1,7 @@
 //function to create a new user
 const token = localStorage.getItem("token");
 orderProcess = () => {
-  var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+  var corsUrl = 'https://everywherecors.herokuapp.com/';
   let data = {
     status: document.getElementById("status").value
   };
@@ -23,9 +23,9 @@ orderProcess = () => {
     return response.json()
   })
   .then(function(data){
-    let msg = Object.values(data);
+    // let msg = Object.values(data);
     // console.log(msg);
-    // let msg = data.message;
+    let msg = data.message;
     if(msg === "Order Status updated successfully"){
       document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
@@ -44,7 +44,7 @@ orderProcess = () => {
 
 // display all orders to the admin
 // const token = localStorage.getItem("token");
-var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+var corsUrl = 'https://everywherecors.herokuapp.com/';
 const url = "https://andela-food-api.herokuapp.com/api/v2/orders";
 fetch(corsUrl  + url, {
     method: 'GET',

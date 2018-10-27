@@ -1,5 +1,5 @@
 // display menu items
-var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+var corsUrl = 'https://everywherecors.herokuapp.com/';
 const url = "https://andela-food-api.herokuapp.com/api/v2/menu";
 fetch(corsUrl + url)
 .then(function(response){
@@ -20,7 +20,7 @@ fetch(corsUrl + url)
 //function to create a new order
 const token = localStorage.getItem("token");
 createOrder = () => {
-  var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+  var corsUrl = 'https://everywherecors.herokuapp.com/';
   const url = 'https://andela-food-api.herokuapp.com/api/v2/orders';
   var values = document.getElementById("order_menu");
   let data = {
@@ -40,8 +40,8 @@ createOrder = () => {
     return response.json()
   })
   .then(function(data){
-    let msg = Object.values(data);
-    // let msg = data.message;
+    // let msg = Object.values(data);
+    let msg = data.message;
     if(msg === "Order created successfully"){
       document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;

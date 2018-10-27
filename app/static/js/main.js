@@ -1,5 +1,5 @@
 const activeUser = localStorage.getItem("currentUser");
-var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+var corsUrl = 'https://everywherecors.herokuapp.com/';
 const URI = "https://andela-food-api.herokuapp.com/api/v2/auth/signup";
 fetch(corsUrl  + URI, {
     method: 'GET',

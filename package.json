@@ -1,23 +1,40 @@
 {
-  "name": "fast-food-app",
+  "name": "package",
   "version": "1.0.0",
-  "description": "- A user can register and login.\r - A user should be able to order for food\r - The admin should be able to add, edit or delete the fast-food items\r - The admin should be able to see a list of fast-food items\r - The Admin user should be able to do the following:\r       See a list of orders\r       Accept and decline orders\r       Mark orders as completed\r - A user should be able to see a history of ordered food",
+  "description": "",
+  "author": "Timothy",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch": "jest --watchAll *.test.js",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "fetch-mock": "^6.5.2",
+    "jest": "^23.6.0",
+    "jest-environment-jsdom": "^23.4.0",
+    "jest-environment-jsdom-global": "^1.1.0",
+    "jest-fetch-mock": "^1.6.5"
+  },
+  "dependencies": {
+    "node-fetch": "^2.2.0",
+    "npm": "^6.4.1",
+    "watchman": "^1.0.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "./setupJest.js"
+    ],
+    "testURL": "https://github.com/TeamoreA/fast-food-app/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TeamoreA/fast-food-app.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/TeamoreA/fast-food-app/issues"
   },
-  "homepage": "https://github.com/TeamoreA/fast-food-app#readme",
-  "devDependencies": {
-    "jest": "^23.6.0"
-  }
+  "homepage": "https://github.com/TeamoreA/fast-food-app#readme"
 }

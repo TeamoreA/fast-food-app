@@ -1,6 +1,6 @@
 //function to create a new user
 register = () => {
-  var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+  var corsUrl = 'https://everywherecors.herokuapp.com/';
   let data = {
     username: document.getElementById("name").value,
     email: document.getElementById("email").value,
@@ -19,14 +19,15 @@ register = () => {
     return response.json()
   })
   .then(function(data){
-    let msg = data.message;;
+    let msg = data.message;
+    // let msg = Object.values(data);
     console.log(msg);
     // let msg = data.message;
     if(msg === "New user has been created successfully"){
       document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
-      window.location.href = "/login";
+      window.location.assign("/login");
     }
     else{
       document.getElementById('flash').style.display = "block";
@@ -39,7 +40,7 @@ register = () => {
 
 //User login
 login = () => {
-  var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+  var corsUrl = 'https://everywherecors.herokuapp.com/';
   let data = {
     username: document.getElementById("username").value,
     password: document.getElementById("password").value
@@ -65,7 +66,7 @@ login = () => {
       document.getElementById('flash').style.display = "block";
       document.getElementById('flash').innerHTML = msg;
       setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 6000);
-      window.location.href = "/";
+      window.location.assign("/");
     }
     else{
       document.getElementById('flash').style.display = "block";

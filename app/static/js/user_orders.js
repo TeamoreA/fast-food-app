@@ -1,7 +1,7 @@
 //function to get users history
 const token = localStorage.getItem("token");
 var id = localStorage.getItem("userId");
-var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+var corsUrl = 'https://everywherecors.herokuapp.com/';
 var url = `https://andela-food-api.herokuapp.com/api/v2/users/orders/${id}`;
 fetch(corsUrl  + url, {
   method: 'GET',
@@ -31,7 +31,7 @@ for(i = 0; i < items.length; i++){
 
 //function to delete an order
 deleteOrder = () => {
-  var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+  var corsUrl = 'https://everywherecors.herokuapp.com/';
   id = document.getElementById('order_id').value;
   var url = `https://andela-food-api.herokuapp.com/api/v2/orders/${id}`;
   fetch(corsUrl  + url, {
