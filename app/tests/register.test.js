@@ -51,12 +51,12 @@ it('New user is redirected to homepage after signup.', async() => {
     expect(document.getElementById('flash').innerHTML).toBe("New user has been created successfully");
 })
 
-//Test user regsiteration with invalid email address
+// Test user regsiteration with invalid email address
 // it("wrong email address", async() => {
 //     fetchData = jest.spyOn(global, 'fetch')
 //     fetchData.mockImplementation(()=>Promise.resolve({
-//     json: ()=>Promise.resolve({Message: "Your email address is invalid!"})}))
-//     document.getElementById('email').value = "tiim@app.com";
+//     json: ()=>Promise.resolve({essage: "Your email address is invalid!"})}))
+//     document.getElementById('email').value = "tiimapp.com";
 //     document.getElementById('send').click();
 //     expect(fetchData).toHaveBeenCalledTimes(1);
 //     const fetchArgs = fetchData.mock.calls[0];
@@ -68,14 +68,14 @@ it('New user is redirected to homepage after signup.', async() => {
 //         },
 //         body: JSON.stringify({
 //             username: "Tiim",
-//             email: "tiim@app.com",
+//             email: "tiimapp.com",
 //             password: "password",
 //             confirm_password: "password"
 //         })
 //     });
 
-    // await Promise.resolve().then();
-    // expect(document.getElementById('flash').innerHTML).toBe("Password do not match");
+//     await Promise.resolve().then();
+//     expect(document.getElementById('flash').innerHTML).toBe("Password do not match");
 // })
 //Test user regsiteration for registered users
 it("test for duplicate user name", async() => {

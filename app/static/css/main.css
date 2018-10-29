@@ -207,11 +207,11 @@ footer {
   background-color: #f3f3f3;
   bottom: 0px;
   position: fixed;
-  opacity: 0.8;
+  opacity: 0.6;
   width: 100%;
 }
  footer p {
-   padding: 4px;
+   padding: 3px;
    text-align: center;
    color: black;
    font-size: 14px;
