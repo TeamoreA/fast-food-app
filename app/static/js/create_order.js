@@ -49,9 +49,10 @@ createOrder = () => {
       window.location.href = "/admin/myorders";
     }
     else{
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
+      alert(msg);
+      // document.getElementById('flash').style.display = "block";
+      // document.getElementById('flash').innerHTML = msg;
+      // setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
     }
   })
   .catch(error => console.log(error));

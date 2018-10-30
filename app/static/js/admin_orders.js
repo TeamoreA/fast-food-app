@@ -33,9 +33,10 @@ orderProcess = () => {
       window.location.href = "/admin/orders_list";
     }
     else{
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
+      alert(msg);
+      // document.getElementById('flash').style.display = "block";
+      // document.getElementById('flash').innerHTML = msg;
+      // setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
     }
   })
   .catch(error => console.log(error));

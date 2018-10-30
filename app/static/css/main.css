@@ -259,15 +259,38 @@ footer {
   width: 100%;
  }
 
-#flash {
+#flash-default {
   display: none;
   width: 80%;
-  /*padding: 15px;*/
   color: white;
-  border-radius: 5px;
   background-color: #5AA5ED;
+  border-radius: 5px;
   text-align: center;
   margin: auto;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 22px;
+}
+
+#flash-success {
+  display: none;
+  width: 80%;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 22px;
+  
+}
+#flash-danger {
+  display: none;
+  width: 80%;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 22px;
 }

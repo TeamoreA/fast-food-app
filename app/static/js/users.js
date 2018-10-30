@@ -24,15 +24,16 @@ register = () => {
     console.log(msg);
     // let msg = data.message;
     if(msg === "New user has been created successfully"){
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
+      document.getElementById('flash-success').style.display = "block";
+      document.getElementById('flash-success').innerHTML = msg;
+      setTimeout(() => {document.getElementById("flash-success").innerHTML = "";}, 4000);
       window.location.assign("/login");
     }
     else{
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
+      alert(msg);
+      // document.getElementById('flash-danger').style.display = "block";
+      // document.getElementById('flash-danger').innerHTML = msg;
+      // setTimeout(() => {document.getElementById("flash-danger").innerHTML = "";}, 5000);
     }
   })
   .catch(error => console.log(error));
@@ -63,15 +64,16 @@ login = () => {
     if(msg === "You logged in successfully"){
       access_token = data.token
       localStorage.setItem('token', access_token);
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 6000);
+      document.getElementById('flash-success').style.display = "block";
+      document.getElementById('flash-success').innerHTML = msg;
+      setTimeout(() => {document.getElementById("flash-success").innerHTML = "";}, 6000);
       window.location.assign("/");
     }
     else{
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 6000);
+      alert(msg);
+      // document.getElementById('flash-danger').style.display = "block";
+      // document.getElementById('flash-danger').innerHTML = msg;
+      // setTimeout(() => {document.getElementById("flash-danger").innerHTML = "";}, 6000);
     }
   })
   .catch(error => console.log(error));

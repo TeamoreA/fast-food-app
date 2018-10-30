@@ -47,14 +47,15 @@ deleteOrder = () => {
     // console.log(msg);
     let msg = data.message;
     if(msg === "Order deleted successfully"){
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
+      document.getElementById('flash-success').style.display = "block";
+      document.getElementById('flash-success').innerHTML = msg;
+      setTimeout(() => {document.getElementById("flash-success").innerHTML = "";}, 4000);
     }
     else{
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
+      alert(msg);
+      // document.getElementById('flash').style.display = "block";
+      // document.getElementById('flash').innerHTML = msg;
+      // setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
     }
   })
   .catch(error => console.log(error));

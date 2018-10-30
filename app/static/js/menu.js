@@ -26,15 +26,16 @@ createMenu = () => {
     let msg = data.message;
     console.log(msg);
     if(msg === "Food item created successfully"){
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 8000);
+      document.getElementById('flash-success').style.display = "block";
+      document.getElementById('flash-success').innerHTML = msg;
+      setTimeout(() => {document.getElementById("flash-success").innerHTML = "";}, 8000);
       window.location.href = "/admin/admin_index";
     }
     else{
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 8000);
+      alert(msg);
+      // document.getElementById('flash').style.display = "block";
+      // document.getElementById('flash').innerHTML = msg;
+      // setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 8000);
     }
   })
   .catch(error => console.log(error));
