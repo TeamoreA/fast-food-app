@@ -61,7 +61,7 @@ login = () => {
   })
   .then(function(data){
     let msg = data.message;
-    if(msg === "You logged in successfully"){
+    if(msg === 'Welcome ' + username + ', You logged in successfully'){
       access_token = data.token
       localStorage.setItem('token', access_token);
       document.getElementById('flash-success').style.display = "block";

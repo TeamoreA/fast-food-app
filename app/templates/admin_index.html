@@ -8,6 +8,12 @@
 		<a class="link-btn left-align button-primary" href="{{ url_for('create_menu') }}"><i class="fas fa-plus"></i> New</a>
 	</div>
 	<hr>
+	<form onsubmit="event.preventDefault();">
+          <div>
+            <input type="number" min="1" placeholder="Enter order id to delete" id="menu_id" style="padding: 8px;width: 30%;font-size: 15px; border-radius: 5px; min-width: 130px;" required>
+            <button class="link-btn left-align button-danger" id="submit" onclick="deleteMenu();">Delete <i class="far fa-trash-alt"></i></button>
+          </div>
+      </form>
 	<div style="overflow-x:auto;">
 		<table id="food_menu">
 			<tr>
