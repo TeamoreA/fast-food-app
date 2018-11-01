@@ -27,9 +27,9 @@ orderProcess = () => {
     // console.log(msg);
     let msg = data.message;
     if(msg === "Order Status updated successfully"){
-      document.getElementById('flash').style.display = "block";
-      document.getElementById('flash').innerHTML = msg;
-      setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 4000);
+      document.getElementById('flash-success').style.display = "block";
+      document.getElementById('flash-success').innerHTML = msg;
+      setTimeout(() => {document.getElementById("flash-success").innerHTML = "";}, 6000);
       window.location.href = "/admin/orders_list";
     }
     else{

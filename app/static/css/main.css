@@ -294,3 +294,7 @@ footer {
   margin-top: 10px;
   font-size: 22px;
 }
+
+#update-tab {
+  display: none;
+ }

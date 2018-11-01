@@ -10,7 +10,7 @@
 	<hr>
 	<form onsubmit="event.preventDefault();">
           <div>
-            <input type="number" min="1" placeholder="Enter order id to delete" id="menu_id" style="padding: 8px;width: 30%;font-size: 15px; border-radius: 5px; min-width: 130px;" required>
+            <input type="number" min="1" placeholder="Enter menu id to delete" id="menu_id" style="padding: 8px;width: 30%;font-size: 15px; border-radius: 5px; min-width: 130px;" required>
             <button class="link-btn left-align button-danger" id="submit" onclick="deleteMenu();">Delete <i class="far fa-trash-alt"></i></button>
           </div>
       </form>
@@ -26,4 +26,5 @@
 	</div>
 </div>
 <script type="text/javascript" src="{{ url_for('static', filename='js/menu.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/delete_menu.js') }}"></script>
 {% endblock %}

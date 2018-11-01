@@ -54,6 +54,12 @@ def create_order():
     return render_template('create_order.html', title='create-order')
 
 
+@app.route('/user/update_order')
+def update_order():
+    '''route to return update order page'''
+    return render_template('edit_order.html', title='create-order')
+
+
 @app.route('/admin/complete_order')
 def complete_order():
     '''route to mark order as complete'''
