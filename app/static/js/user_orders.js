@@ -25,7 +25,7 @@ for(i = 0; i < items.length; i++){
     <td>${items[i].quantity}</td>
     <td>${items[i].status}</td>
     <td>
-      <button onclick=(populateOrder("${items[i].quantity}","${items[i].address}")) id="update-order" class="button-small button-primary"><i class="fas fa-pencil-alt"></i></button>
+      <button onclick=(populateOrder("${items[i].id}","${items[i].quantity}","${items[i].address}")) id="update-order" class="button-small button-primary"><i class="fas fa-pencil-alt"></i></button>
     </td>
   </tr>`;
   localStorage.removeItem('order_id');
@@ -34,9 +34,11 @@ for(i = 0; i < items.length; i++){
 })
 .catch(error => console.log(error));
 
-populateOrder = (quantity,address) => {
+populateOrder = (id,quantity,address) => {
   document.getElementById("update-tab").style.display = "block";
   document.getElementById("display-tab").style.display = "none";
+  localStorage.removeItem('order_id');
+  localStorage.setItem('order_id', id);
   document.getElementById('my-quantity').innerHTML = `<input class="form-control" type="number" min="1" value="${quantity}" id="quantity" required>`;
   document.getElementById('my-address').innerHTML = `<input class="form-control" type="text" id="address" value="${address}" required>`;
 }
@@ -94,7 +96,7 @@ fetch(corsUrl + "https://andela-food-api.herokuapp.com/api/v2/menu")
 
 // update order item
 updateOrder = () => {
-  let id = localStorage.getItem("order_id")
+  let id = localStorage.getItem("order_id");
   var corsUrl = 'https://everywherecors.herokuapp.com/';
   const url = `https://andela-food-api.herokuapp.com/api/v2/users/orders/${id}`;
   var values = document.getElementById("order_menu");
