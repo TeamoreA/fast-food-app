@@ -19,21 +19,21 @@ register = () => {
     return response.json()
   })
   .then(function(data){
-    let msg = data.message;
-    // let msg = Object.values(data);
-    console.log(msg);
-    // let msg = data.message;
-    if(msg === "New user has been created successfully"){
+    let message = data.message;
+    // let message = Object.values(data);
+    console.log(message);
+    // let message = data.message;
+    if(message === "New user has been created successfully"){
       document.getElementById('flash-success').style.display = "block";
-      document.getElementById('flash-success').innerHTML = msg;
+      document.getElementById('flash-success').innerHTML = message;
       setTimeout(() => {document.getElementById("flash-success").innerHTML = "";}, 4000);
       window.location.assign("/login");
     }
     else{
-      alert(msg);
-      // document.getElementById('flash-danger').style.display = "block";
-      // document.getElementById('flash-danger').innerHTML = msg;
-      // setTimeout(() => {document.getElementById("flash-danger").innerHTML = "";}, 5000);
+      // alert(message);
+      document.getElementById('flash-danger').style.display = "block";
+      document.getElementById('flash-danger').innerHTML = message;
+      setTimeout(() => {document.getElementById("flash-danger").innerHTML = "";}, 5000);
     }
   })
   .catch(error => console.log(error));
@@ -70,10 +70,10 @@ login = () => {
       window.location.assign("/");
     }
     else{
-      alert(msg);
-      // document.getElementById('flash-danger').style.display = "block";
-      // document.getElementById('flash-danger').innerHTML = msg;
-      // setTimeout(() => {document.getElementById("flash-danger").innerHTML = "";}, 6000);
+      // alert(msg);
+      document.getElementById('flash-danger').style.display = "block";
+      document.getElementById('flash-danger').innerHTML = msg;
+      setTimeout(() => {document.getElementById("flash-danger").innerHTML = "";}, 6000);
     }
   })
   .catch(error => console.log(error));
