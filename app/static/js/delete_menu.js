@@ -14,7 +14,6 @@ deleteMenu = () => {
     return response.json()
   })
   .then(function(data){
-    // console.log(msg);
     let msg = data.message;
     if(msg === "Menu item deleted successfully"){
       document.getElementById('flash-default').style.display = "block";

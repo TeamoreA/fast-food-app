@@ -1,4 +1,4 @@
-isAdmin = localStorage.getItem('isAdmin');
+
 const activeUser = localStorage.getItem("currentUser");
 var corsUrl = 'https://everywherecors.herokuapp.com/';
 const URI = "https://andela-food-api.herokuapp.com/api/v2/auth/signup";
@@ -15,12 +15,16 @@ fetch(corsUrl  + URI, {
   let users = data['Users'];
   for(i = 0; i < users.length; i++){
       if (users[i].name === activeUser) {
+        localStorage.removeItem('isAdmin');
       	localStorage.setItem('isAdmin', users[i].admin);
       	localStorage.setItem('userId', users[i].id);
 	  }
   }
 
 })
+
+let isAdmin = localStorage.getItem('isAdmin');
+console.log(isAdmin);
 
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -50,7 +54,7 @@ if (localStorage.getItem('token') === null) {
 	document.getElementById('login').style.display = "none";
 	document.getElementById('register').style.display = "none";
 }
-if (isAdmin !== 'true') {
+if ((localStorage.getItem('token') === null) || (isAdmin !== 'true')) {
 	document.getElementById('orders').style.display = "none";
 	document.getElementById('menu').style.display = "none";
 }

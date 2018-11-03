@@ -5,12 +5,9 @@ orderProcess = () => {
   let data = {
     status: document.getElementById("status").value
   };
-  // id = data.order_id
   id = document.getElementById('order_id').value;
   console.log(status);
   var url = `https://andela-food-api.herokuapp.com/api/v2/orders/${id}`;
-   // console.log(url);
-  // const url = `https://andela-food-api.herokuapp.com/api/v2/orders/${id}`;
   fetch(corsUrl  + url, {
     method: 'PUT',
     body: JSON.stringify(data),
@@ -23,8 +20,6 @@ orderProcess = () => {
     return response.json()
   })
   .then(function(data){
-    // let msg = Object.values(data);
-    // console.log(msg);
     let msg = data.message;
     if(msg === "Order Status updated successfully"){
       document.getElementById('flash-success').style.display = "block";
@@ -34,9 +29,6 @@ orderProcess = () => {
     }
     else{
       alert(msg);
-      // document.getElementById('flash').style.display = "block";
-      // document.getElementById('flash').innerHTML = msg;
-      // setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
     }
   })
   .catch(error => console.log(error));
@@ -44,7 +36,6 @@ orderProcess = () => {
 
 
 // display all orders to the admin
-// const token = localStorage.getItem("token");
 var corsUrl = 'https://everywherecors.herokuapp.com/';
 const url = "https://andela-food-api.herokuapp.com/api/v2/orders";
 fetch(corsUrl  + url, {

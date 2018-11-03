@@ -7,7 +7,6 @@ fetch(corsUrl + url)
 })
 .then(function(data){
   let items = data["menu"];
-  // console.log(items);
   for(i = 0; i < items.length; i++){
     document.getElementById("order_menu").innerHTML += `
     <option value="${items[i].name}" id="name">${items[i].name}</option>
@@ -50,9 +49,6 @@ createOrder = () => {
     }
     else{
       alert(msg);
-      // document.getElementById('flash').style.display = "block";
-      // document.getElementById('flash').innerHTML = msg;
-      // setTimeout(() => {document.getElementById("flash").innerHTML = "";}, 5000);
     }
   })
   .catch(error => console.log(error));

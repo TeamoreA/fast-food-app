@@ -9,7 +9,6 @@ fetch(corsUrl + url)
   let items = data["menu"];
 
 
-  // console.log(items);
   for(index = 0; index < items.length; index++){
     document.getElementById("food_menu").innerHTML += `
     <div class="card">

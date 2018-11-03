@@ -1,6 +1,6 @@
 # fast-food-fast
 [![Build Status](https://travis-ci.com/TeamoreA/fast-food-app.svg?branch=develop)](https://travis-ci.com/TeamoreA/fast-food-app)
-[![Coverage Status](https://coveralls.io/repos/github/TeamoreA/fast-food-app/badge.svg)](https://coveralls.io/github/TeamoreA/fast-food-app)
+[![Coverage Status](https://coveralls.io/repos/github/TeamoreA/fast-food-app/badge.svg?branch=develop)](https://coveralls.io/github/TeamoreA/fast-food-app?branch=develop)
 
  ###### This is a fast food app that allows users to make orders and admin can create food items, edit, delete and accepted the orders made by users.
 
@@ -14,3 +14,6 @@
       Accept and decline orders
       Mark orders as completed
 - A user should be able to see a history of ordered food
+
+## Demo
+- The app is hosted in [HERE](https://consume-endpoints.herokuapp.com/)
